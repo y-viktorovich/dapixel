@@ -1,0 +1,76 @@
+.intro {
+    padding-top: 31.7rem;
+    padding-bottom: 35.2rem;
+    position: relative;
+
+    background-image: url('../images/svg/intro/intro-bg.svg');
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+    
+
+    &__inner {
+        display: flex;
+    }
+
+    &__content {
+        width: 60%;
+        max-width: 750px;
+    }
+
+    &__photo {
+        width: 40%;
+
+        &-bg {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+
+            width: 960px;
+            height: 1080px;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+
+
+    &__title {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 7.6rem;
+        color: $black;
+        font-weight: 700;
+        line-height: 1.15;
+
+        margin-bottom: 3.6rem;
+
+        & span {
+            color: $yellow;
+        }
+    }
+
+    &__subtitle {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 2.4rem;
+        color: $black;
+        font-weight: 600;
+        line-height: 1.2;
+
+        margin-bottom: 1rem;
+    }
+
+    &__services {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin-bottom: 3.5rem;
+
+        &-icon {
+            opacity: .7;
+            padding-right: 3.8rem;
+            width: 33.3333%;
+            display: inline-block;
+        }
+    }
+}

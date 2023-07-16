@@ -1,0 +1,21 @@
+.section {
+    padding: 18rem 12rem;
+
+    &__title {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 5.2rem;
+        color: $black;
+        font-weight: 700;
+        text-align: center;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 89px;
+            height: 3px;
+            background-color: $yellow;
+            border-radius: 2px;
+            margin: 2rem auto 0;
+        }
+    }
+}

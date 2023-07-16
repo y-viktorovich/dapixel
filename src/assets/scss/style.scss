@@ -1,0 +1,43 @@
+@import "vars";
+@import "fonts";
+@import "vendor/reset";
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: $white;
+
+    font-family: 'HK Grotesk', sans-serif;
+    font-size: 1.8rem;
+    color: $black;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+/* Blocks */
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/container";
+@import "blocks/nav";
+@import "blocks/btn";
+@import "blocks/intro";
+@import "blocks/section";
+@import "blocks/descriptions";
+
+
+
+
+
+
+/* Blocks */
+@import "helpers";
+
+
+

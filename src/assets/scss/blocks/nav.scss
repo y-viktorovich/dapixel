@@ -1,0 +1,22 @@
+.nav {
+
+    &__link {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 1.8rem;
+        color: $black;
+        font-weight: 600;
+        text-decoration: none;
+
+        height: auto;
+
+        transition: opacity .2s linear;
+
+        &:hover:not(.btn) {
+                opacity: .6;
+            }
+    }
+
+    &__link + .nav__link {
+        margin-left: 4.45rem;
+    }
+}

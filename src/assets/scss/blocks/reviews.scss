@@ -1,0 +1,32 @@
+.reviews {
+    padding: 12.9rem 19.1rem;
+    border-radius: 1rem;
+    box-shadow: 0 69px 114px -110px $black;
+    display: flex;
+
+    &__square {
+        position: relative;
+
+        width: 253px;
+        height: 292px;
+        border-radius: 1rem;
+        background-color: $yellow;
+    }
+
+    &__quote {
+        position: absolute;
+        left: 2.7rem;
+        bottom: -4.3rem;
+        z-index: 1;
+
+        display: block;
+        width: 100px;
+        height: 87.5px;
+    }
+
+    &__content {
+
+    }
+
+
+}

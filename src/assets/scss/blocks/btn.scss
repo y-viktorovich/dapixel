@@ -21,11 +21,15 @@
         color: $white;
     }
 
+
     &--text__24 {
         font-size: 2.4rem;
+        padding: 1em 2.3em;
+    }
+
+    &--intro {
         color: $white;
         background-color: $yellow;
-        padding: 1em 2.3em;
         border-radius: .8em;
 
         &:hover {
@@ -34,5 +38,16 @@
         }
     }
 
+    &--darken {
+        width: 100%;
+        background-color: $yellow-darken;
+        border-radius: 2em;
 
+        color: $white;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
 }

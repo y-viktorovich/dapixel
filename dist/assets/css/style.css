@@ -502,20 +502,36 @@ body {
 
 .btn--text__24 {
     font-size: 2.4rem;
+    padding: 1em 2.3em;
+}
+
+.btn--intro {
     color: #fff;
     background-color: #F9BC6E;
-    padding: 1em 2.3em;
     border-radius: 0.8em;
 }
 
-.btn--text__24:hover {
+.btn--intro:hover {
     background-color: #fff;
     color: #F9BC6E;
+}
+
+.btn--darken {
+    width: 100%;
+    background-color: #C59E6F;
+    border-radius: 2em;
+    color: #fff;
+}
+
+.btn--darken:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 .intro {
     padding-top: 31.7rem;
     padding-bottom: 35.2rem;
+    margin-bottom: 7.2rem;
     position: relative;
     background-image: url("../images/svg/intro/intro-bg.svg");
     background-repeat: no-repeat;
@@ -529,7 +545,7 @@ body {
 
 .intro__content {
     width: 60%;
-    max-width: 800px;
+    max-width: 750px;
 }
 
 .intro__photo {
@@ -589,7 +605,7 @@ body {
 }
 
 .section {
-    padding: 18rem 12rem;
+    padding: 7.2rem 0 10rem;
 }
 
 .section__title {
@@ -611,7 +627,7 @@ body {
 }
 
 .descriptions {
-    padding-top: 4.5rem;
+    padding: 4.5rem 0;
 }
 
 .descriptions__inner {
@@ -642,11 +658,6 @@ body {
     left: -37px;
 }
 
-.descriptions__item:nth-child(1n+3) .descriptions__photo-img {
-    left: 0;
-    top: 40px;
-}
-
 .descriptions__number {
     font-family: "HK Grotesk", sans-serif;
     font-size: 12.4rem;
@@ -662,7 +673,7 @@ body {
     display: block;
     position: absolute;
     top: 0;
-    left: 100px;
+    left: 50px;
     z-index: 1;
 }
 
@@ -689,6 +700,105 @@ body {
     color: #000;
     font-weight: 600;
     line-height: 1.7;
+}
+
+.subscribe {
+    padding: 24.3rem 0 24.5rem;
+    margin-top: 7.8rem;
+    margin-bottom: 10.85rem;
+    background-color: #F9BC6E;
+}
+
+.subscribe__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.subscribe__text {
+    width: 51.8%;
+    font-family: "HK Grotesk", sans-serif;
+    font-size: 6.4rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.subscribe__text:before {
+    content: "";
+    display: block;
+    width: 126px;
+    height: 6px;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.5));
+    border-radius: 1rem;
+}
+
+.subscribe__form {
+    width: 48.2%;
+}
+
+.form__group {
+    margin-bottom: 2rem;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    padding: 2.4rem 4rem;
+    border: none;
+    border-radius: 10rem;
+    font-family: "HK Grotesk", sans-serif;
+    font-size: 2.2rem;
+    color: #000;
+    line-height: 1.3;
+    transition: background-color 0.2s linear, box-shadow 0.2s linear;
+}
+
+.form__input:focus {
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.form__input:focus::-webkit-input-placeholder {
+    font-size: 0;
+}
+
+.form__input:focus:-ms-input-placeholder {
+    font-size: 0;
+}
+
+.form__input:focus::-ms-input-placeholder {
+    font-size: 0;
+}
+
+.form__input:focus::placeholder {
+    font-size: 0;
+}
+
+.reviews {
+    padding: 12.9rem 19.1rem;
+    border-radius: 1rem;
+    box-shadow: 0 69px 114px -110px #000;
+}
+
+.reviews:before {
+    position: relative;
+    width: 253px;
+    height: 292px;
+    border-radius: 1rem;
+    background-color: #F9BC6E;
+}
+
+.reviews__quote {
+    position: absolute;
+    left: 2.7rem;
+    bottom: -4.3rem;
+    z-index: 1;
+    display: block;
+    width: 100px;
+    height: 87.5px;
 }
 
 /* Blocks */

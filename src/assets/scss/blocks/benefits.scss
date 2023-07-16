@@ -1,0 +1,49 @@
+.benefits {
+    padding: 16.5rem 0 28.3rem;
+    position: relative;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__content {
+        width: 42%;
+    }
+
+    &__photo {
+        width: 58%;
+    }
+
+    &__title {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 5.2rem;
+        color: $black;
+        font-weight: 700;
+        line-height: 1.4;
+
+        margin-bottom: 1.8rem;
+    }
+
+    &__text {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 2.2rem;
+        color: $black;
+        font-weight: 600;
+        line-height: 1.9;
+
+        margin-bottom: 5rem;
+    }
+
+    &__photo-img {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        z-index: 1;
+
+        max-width: 1541px;
+        height: 867px;
+        object-fit: cover;
+        object-position: center;;
+    }
+}

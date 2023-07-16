@@ -21,21 +21,24 @@
 
         padding: 3.1rem 0;
     }
+}
 
-    &__logo {
-        width: 194px;
-        height: 28px;
-    }
+.header__logo,
+.footer__logo {
+    display: inline-block;
 
-    &__logo-icon {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
+    width: 194px;
+    height: 28px;
+}
 
-        transition: opacity .2s linear;
+.header__logo-icon,
+.footer__logo-icon {
+    width: 100%;
+    height: 100%;
 
-        &:hover {
-            opacity: .7;
-        }
+    transition: opacity .2s linear;
+
+    &:hover {
+        opacity: .7;
     }
 }

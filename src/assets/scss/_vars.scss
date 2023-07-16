@@ -2,4 +2,22 @@ $black: #000;
 $white: #fff;   
 $yellow: #F9BC6E;
 $yellow-darken: #C59E6F;  
-$yellow-black: #DFA762
+$yellow-black: #DFA762;
+
+@mixin after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 3.6rem;
+
+
+    border: 3px solid $black;
+    border-radius: 2px;
+    border-top: none;
+    border-left: none;
+    vertical-align: middle;
+
+    transform: rotateZ(-45deg);
+    transition: border-color .2s linear, transform .2s ease-in-out;
+}

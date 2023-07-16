@@ -413,17 +413,22 @@ body {
   align-items: center;
   padding: 3.1rem 0;
 }
-.header__logo {
+
+.header__logo,
+.footer__logo {
+  display: inline-block;
   width: 194px;
   height: 28px;
 }
-.header__logo-icon {
-  display: inline-block;
+
+.header__logo-icon,
+.footer__logo-icon {
   width: 100%;
   height: 100%;
   transition: opacity 0.2s linear;
 }
-.header__logo-icon:hover {
+.header__logo-icon:hover,
+.footer__logo-icon:hover {
   opacity: 0.7;
 }
 
@@ -497,6 +502,7 @@ body {
   font-size: 1.9rem;
   padding: 1.05em 1.89em;
   color: #000;
+  border-radius: 1.05em;
   background-color: #fff;
 }
 .btn--white:hover {
@@ -519,6 +525,35 @@ body {
   vertical-align: middle;
   transform: rotateZ(-45deg);
   transition: border-color 0.2s linear, transform 0.2s ease-in-out;
+}
+.btn--big {
+  color: #fff;
+  font-size: 2.4rem;
+  padding: 1.33em 1.5em;
+  border-radius: 1.04em;
+  background-color: #F9BC6E;
+}
+.btn--big:hover {
+  background-color: #fff;
+  color: #F9BC6E;
+}
+.btn--big:after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 3.6rem;
+  border: 3px solid #000;
+  border-radius: 2px;
+  border-top: none;
+  border-left: none;
+  vertical-align: middle;
+  transform: rotateZ(-45deg);
+  transition: border-color 0.2s linear, transform 0.2s ease-in-out;
+  border-color: #fff;
+}
+.btn--big:hover:after {
+  border-color: #F9BC6E;
 }
 
 .intro {
@@ -781,7 +816,7 @@ body {
 }
 
 .article {
-  margin-top: 8.05rem;
+  margin: 8.05rem 0 9rem;
   background-color: #F9BC6E;
 }
 .article__inner {
@@ -859,6 +894,90 @@ body {
 }
 .article__footer {
   margin-top: auto;
+}
+
+.benefits {
+  padding: 16.5rem 0 28.3rem;
+  position: relative;
+}
+.benefits__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.benefits__content {
+  width: 42%;
+}
+.benefits__photo {
+  width: 58%;
+}
+.benefits__title {
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 5.2rem;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1.8rem;
+}
+.benefits__text {
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 2.2rem;
+  color: #000;
+  font-weight: 600;
+  line-height: 1.9;
+  margin-bottom: 5rem;
+}
+.benefits__photo-img {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  z-index: 1;
+  max-width: 1541px;
+  height: 867px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer {
+  padding: 12.15rem 0;
+  background-color: #F9BC6E;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -2.65rem;
+}
+.footer__block {
+  display: flex;
+}
+.footer__nav {
+  padding: 0 7.3rem;
+}
+.footer__title {
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 2.2rem;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 2.7rem;
+}
+.footer__address {
+  padding-top: 1.1rem;
+}
+.footer__list-item {
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 300;
+  line-height: 1.75;
+  text-decoration: none;
+  margin-bottom: 0.2rem;
+}
+.footer__list-item a {
+  text-decoration: none;
+  color: #000;
+}
+.footer__list-item a:hover {
+  text-decoration: underline;
 }
 
 /* Blocks */

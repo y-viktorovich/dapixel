@@ -3,11 +3,15 @@
     border-radius: 1rem;
     box-shadow: 0 69px 114px -110px $black;
     display: flex;
+    flex-wrap: wrap;
 
     &__square {
         position: relative;
 
-        width: 253px;
+
+
+        width: 24.63%;
+        max-width: 253px;
         height: 292px;
         border-radius: 1rem;
         background-color: $yellow;
@@ -25,7 +29,45 @@
     }
 
     &__content {
+        width: 75.37%;
+        padding: 3.2rem 0 0 5.6rem;
 
+    }
+
+    &__text {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 3.2rem;
+        color: $black;
+        font-weight: 600;
+        line-height: 1.6;
+
+        margin-bottom: 4.5rem;
+    }
+
+    &__author {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 2.2rem;
+        color: $yellow;
+        font-weight: 600;
+
+        &:before,
+        & span:before {
+            content: '';
+            display: inline-block;
+            width: 22px;
+            height: 2px;
+            background-color: $yellow;
+            vertical-align: middle;
+            margin-right: 0.6rem;
+        }
+
+        & span:before {
+            width: 6px;
+            height: 2px;
+            margin: 0 0.6rem;
+        }
+
+        
     }
 
 

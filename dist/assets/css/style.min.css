@@ -698,10 +698,12 @@ body {
   border-radius: 1rem;
   box-shadow: 0 69px 114px -110px #000;
   display: flex;
+  flex-wrap: wrap;
 }
 .reviews__square {
   position: relative;
-  width: 253px;
+  width: 24.63%;
+  max-width: 253px;
   height: 292px;
   border-radius: 1rem;
   background-color: #F9BC6E;
@@ -715,6 +717,39 @@ body {
   width: 100px;
   height: 87.5px;
 }
+.reviews__content {
+  width: 75.37%;
+  padding: 3.2rem 0 0 5.6rem;
+}
+.reviews__text {
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 3.2rem;
+  color: #000;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 4.5rem;
+}
+.reviews__author {
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 2.2rem;
+  color: #F9BC6E;
+  font-weight: 600;
+}
+.reviews__author:before, .reviews__author span:before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background-color: #F9BC6E;
+  vertical-align: middle;
+  margin-right: 0.6rem;
+}
+.reviews__author span:before {
+  width: 6px;
+  height: 2px;
+  margin: 0 0.6rem;
+}
+
 /* Blocks */
 .img {
   display: block;

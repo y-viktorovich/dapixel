@@ -50,4 +50,39 @@
             color: $black;
         }
     }
+
+    &--white {
+        font-size: 1.9rem;
+        padding: 1.05em 1.89em;
+        color: $black;
+
+        background-color: $white;
+
+        &:hover {
+            background-color: $black;
+
+            &:after {
+                border-color: $white;
+                transform: translateX(5px) rotateZ(-45deg);
+            }
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-left: 3.6rem;
+
+
+            border: 3px solid $black;
+            border-radius: 2px;
+            border-top: none;
+            border-left: none;
+            vertical-align: middle;
+
+            transform: rotateZ(-45deg);
+            transition: border-color .2s linear, transform .2s ease-in-out;
+        }
+    }
 }

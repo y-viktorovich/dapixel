@@ -1,47 +1,58 @@
 .btn {
     font-family: 'HK Grotesk', sans-serif;
-    font-size: 1.6rem;
-    color: $yellow;
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: 1.9rem;
+    color: $white;
+    font-weight: 700;
+    line-height: 1.6;
     text-align: center;
     text-decoration: none;
 
     display: inline-block;
-    padding: 0.8em 1.75em;
-    background-color: transparent;
-    border-radius: 2em;
+    padding: .68em 1.21em;
+    background-color: $yellow;
     border: 1px solid $yellow;
     cursor: pointer;
 
     transition: background-color .2s linear, color .2s linear;
 
+
     &:hover {
-        background-color: $yellow;
-        color: $white;
+        background-color: $white;
+        color: $yellow;
     }
 
+    &--trans {
+        font-size: 1.6rem;
+        color: $yellow;
+        font-weight: 600;
+        line-height: 1.2;
+
+        padding: 0.8em 1.75em;
+        background-color: transparent;
+        border-radius: 2em;
+
+        &:hover {
+            background-color: $yellow;
+            color: $white;
+        }
+    }
 
     &--text__24 {
         font-size: 2.4rem;
-        padding: 1em 2.3em;
     }
 
     &--intro {
-        color: $white;
-        background-color: $yellow;
         border-radius: .8em;
-
-        &:hover {
-            background-color: $white;
-            color: $yellow;
-        }
+        padding: 1em 2.3em;
     }
 
     &--darken {
         width: 100%;
+        padding: 1em 2.3em;
+
         background-color: $yellow-darken;
         border-radius: 2em;
+        line-height: 1.2;
 
         color: $white;
 
@@ -52,15 +63,16 @@
     }
 
     &--white {
-        font-size: 1.9rem;
         padding: 1.05em 1.89em;
         color: $black;
 
         border-radius: 1.05em;
+        border-color: transparent;
         background-color: $white;
 
         &:hover {
             background-color: $black;
+            color: $white;
 
             &:after {
                 border-color: $white;
@@ -70,31 +82,36 @@
 
         &:after {
             @include after;
+            border-color: $black;
         }
     }
 
     &--big {
-        color: $white;
-        font-size: 2.4rem;
         padding: 1.33em 1.5em;
         border-radius: 1.04em;
 
-        background-color: $yellow;
-
-        &:hover {
-            background-color: $white;
-            color: $yellow;
-        }
-
         &:after {
             @include after;
-            border-color: $white;
-
         }
 
         &:hover {
             &:after {
-                border-color: $yellow;
+                @include yellow-hover;
+            }
+        }
+    }
+
+    &--sm {
+        padding: .68em 1.21em;
+        border-radius: .78em;
+
+        &:after {
+            @include after;
+        }
+
+        &:hover {
+            &:after {
+                @include yellow-hover;
             }
         }
     }

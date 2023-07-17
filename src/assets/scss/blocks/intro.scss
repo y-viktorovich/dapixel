@@ -7,6 +7,11 @@
     background-image: url('../images/svg/intro/intro-bg.svg');
     background-repeat: no-repeat;
     background-position: 0 bottom;
+
+    &--sm {
+        padding: 31rem 0 28.1rem;
+        margin-bottom: 7.2rem;
+    }
     
 
     &__inner {

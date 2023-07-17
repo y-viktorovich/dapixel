@@ -1,16 +1,21 @@
 .intro {
-    padding-top: 31.7rem;
+    padding-top: 38.3rem;
     padding-bottom: 35.2rem;
-    margin-bottom: 7.2rem;
+    // margin-bottom: 7.2rem;
     position: relative;
 
-    background-image: url('../images/svg/intro/intro-bg.svg');
+    background-image: url('../images/svg/intro/intro-bg.svg'),;
     background-repeat: no-repeat;
     background-position: 0 bottom;
 
+
     &--sm {
         padding: 31rem 0 28.1rem;
-        margin-bottom: 7.2rem;
+        // margin-bottom: 7.2rem;
+    }
+
+    &--big {
+        min-height: 1184px;
     }
     
 
@@ -36,10 +41,17 @@
             height: 1080px;
             object-fit: contain;
             object-position: center;
+
+            &--services {
+                width: 713px;
+                height: 802px;
+                top: 50%;
+                left: 50%;
+
+                transform: translateY(-45%);
+            }
         }
     }
-
-
 
     &__title {
         font-family: 'HK Grotesk', sans-serif;

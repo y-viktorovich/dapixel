@@ -41,6 +41,10 @@
         font-size: 2.4rem;
     }
 
+    &--text__22 {
+        font-size: 2.2rem;
+    }
+
     &--intro {
         border-radius: .8em;
         padding: 1em 2.3em;
@@ -104,6 +108,22 @@
     &--sm {
         padding: .68em 1.21em;
         border-radius: .78em;
+
+        &:after {
+            @include after;
+        }
+
+        &:hover {
+            &:after {
+                @include yellow-hover;
+            }
+        }
+    }
+
+    &--medium {
+        padding: 1.04em 1.5em;
+        border-radius: .90em;
+        line-height: 1.1;
 
         &:after {
             @include after;

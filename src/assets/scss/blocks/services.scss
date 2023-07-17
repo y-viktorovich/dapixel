@@ -1,0 +1,66 @@
+.services {
+    margin-top: -50px;
+    padding-bottom: 150px;
+    position: relative;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__col {
+        width: 50%;
+        padding: 0 1.8rem;
+
+        &:nth-child(2) {
+            margin-top: 12.7rem;
+        }
+    }
+
+    &__item {
+        padding: 6.2rem 4.85rem 7.2rem 5.8rem;
+        border-radius: 30px;
+        box-shadow: 0 69px 114px rgba($black, .08);
+
+        margin-bottom: 5.2rem;
+    }
+
+    &__header {
+        margin-bottom: 1.6rem;
+    }
+
+    &__icon {
+        width: 102px;
+        height: 102px;
+
+        margin-bottom: 3.95rem;
+    }
+
+    &__title {
+        font-size: 2.8rem;
+        color: $black;
+        font-weight: 700;
+    }
+
+    &__content {
+        font-size: 1.8rem;
+        color: $black;
+        font-weight: 600;
+        line-height: 1.6;
+
+        opacity: 0.7;
+
+        text-align: justify;
+        margin-bottom: 4.7rem;
+
+        p {
+            padding-right: 1rem;
+        }
+    }
+
+    &__footer {
+        a {
+            width: 100%;
+        }
+    }
+}

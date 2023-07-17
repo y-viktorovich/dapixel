@@ -1,0 +1,107 @@
+.personal {
+    margin-top: -150px;
+    padding: 4.3rem 0 19rem;
+    position: relative;
+    z-index: 1;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: 0 -2.55rem;
+    }
+
+    &__col {
+        width: 33.3333%;
+        padding: 4.3rem 2.55rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 5.6rem 5.95rem;
+
+        border-radius: 2rem;
+        box-shadow: 0 69px 114px rgba($black, .08);
+        background-color: $white;
+
+        text-align: center;
+    }
+
+    &__header {
+        margin-bottom: 1.4rem;
+    }
+
+    &__photo {
+        width: 125px;
+        height: 125px;
+        display: block;
+
+        padding: 3px;
+        margin: 0 auto 1.25rem;
+        border-radius: 50%;
+        border: 3px solid $yellow;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: transparent;
+        outline: none;
+
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 1.2;
+
+        a {
+            text-decoration: none;
+            color: $black;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__position {
+        font-size: 2rem;
+        color: $black;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    &__content {
+        font-size: 2rem;
+        color: $periwinkle;
+        font-weight: 200;
+
+        margin-bottom: 3.5rem;
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: $periwinkle;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__footer {
+        margin-top: auto;
+
+        a {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,155 @@
+.request {
+
+    padding: 13.9rem 0 19.8rem;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 12.3rem 0 12.3rem;
+        box-shadow: 0 69px 114px rgba($black, .08);
+        border-radius: 20px;
+    }
+
+    &__info {
+        width: 52.9%;
+        
+    }
+
+    &__info-item {
+        max-width: 383px;
+        margin: 0 auto;
+    }
+
+
+
+    &__title {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 4.2rem;
+        color: $black;
+        font-weight: 700;
+        line-height: 1.3;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 89px;
+            height: 3px;
+            background-color: $yellow;
+            margin: 3.9rem 0;
+        }
+    }
+
+    &__list {
+        margin-bottom: 3.9rem;
+    }
+
+    &__list-item {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 1.8rem;
+        color: $black;
+        font-weight: 600;
+        line-height: 2;
+        opacity: .7;
+
+        a {
+            color: $black;
+            text-decoration: none;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__social {
+        margin-bottom: 3.9rem;
+    }
+
+    &__link {
+        display: inline-block;
+
+        & + .request__link {
+            margin-left: 2.2rem;
+        }
+
+        &:hover {
+            .request__link-icon {
+                fill: $black;
+            }
+        }
+    }
+
+    &__link-icon {
+        width: 24px;
+        height: 24px;
+        fill: $yellow;
+
+        transition: fill .2s linear;
+    }
+
+    &__form {
+        width: 47.1%;
+        max-width: 452px;
+
+        &-title {
+            font-family: 'HK Grotesk', sans-serif;
+            font-size: 2.2rem;
+            color: $black;
+            line-height: 1.3;
+            letter-spacing: .5px;
+
+            margin-bottom: 2.2rem;
+        }
+    }
+
+    &__form-group {
+        margin-bottom: 0.8rem;
+
+        &:last-child {
+            margin-bottom: 1.1rem;
+        }
+    }
+
+    &__form-group__input,
+    &__form-group__textarea {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 1.6rem;
+        color: $black;
+        font-weight: 400;
+        line-height: 1.4;
+
+        display: block;
+        width: 100%;
+        padding: 2.1rem 3.2rem;
+        background: none;
+        border: 1px solid $gray;
+        border-radius: 1.5rem;
+
+        transition: border-color .2s linear, background-color .2s linear;
+
+        &::placeholder {
+            color: $black;
+            opacity: .3;
+        }
+
+        &:focus {
+            border-color: $black;
+            background-color: darken($white, 5%);
+
+            &::placeholder {
+                font-size: 0;
+            }
+        }
+    }
+
+    &__form-group__textarea {
+        resize: none;
+        height: 156px;
+    }
+
+
+
+
+
+}

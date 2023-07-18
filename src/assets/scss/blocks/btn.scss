@@ -36,13 +36,22 @@
             color: $white;
         }
     }
+    
+    &--text__20 {
+        font-size: 2rem;
+    }
+
+    &--text__22 {
+        font-size: 2.2rem;
+    }
 
     &--text__24 {
         font-size: 2.4rem;
     }
 
-    &--text__22 {
-        font-size: 2.2rem;
+    &--radius {
+        border-radius: 1.33rem;
+        border-width: 2px;
     }
 
     &--intro {
@@ -134,5 +143,13 @@
                 @include yellow-hover;
             }
         }
+    }
+
+    &--request {
+        
+        padding: 1.1em 2em;
+        border-radius: 1.33em;
+        width: 100%;
+        line-height: 1;
     }
 }

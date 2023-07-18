@@ -1,17 +1,22 @@
 .intro {
     padding-top: 38.3rem;
     padding-bottom: 35.2rem;
-    // margin-bottom: 7.2rem;
     position: relative;
+    overflow: hidden;
 
-    background-image: url('../images/svg/intro/intro-bg.svg'),;
+    background-image: url('../images/svg/intro/intro-bg.svg');
     background-repeat: no-repeat;
     background-position: 0 bottom;
+
+    &--dashed {
+        background-image:  url('../images/svg/intro/intro-dashed.svg'), url('../images/svg/intro/intro-bg.svg');
+        background-repeat: no-repeat;
+        background-position: 0 750px, left bottom;
+    }
 
 
     &--sm {
         padding: 31rem 0 28.1rem;
-        // margin-bottom: 7.2rem;
     }
 
     &--big {
@@ -50,6 +55,24 @@
 
                 transform: translateY(-45%);
             }
+
+            &--audit {
+                width: 777px;
+                height: 874px;
+                top: 50%;
+                left: 50%;
+
+                transform: translateY(-50%);
+            }
+
+            &--industries {
+                width: 657px;
+                height: 739px;
+                top: 50%;
+                left: 58%;
+
+                transform: translateY(-51%);
+            }
         }
     }
 
@@ -72,7 +95,7 @@
         font-size: 2.4rem;
         color: $black;
         font-weight: 600;
-        line-height: 1.2;
+        line-height: 1.4;
 
         margin-bottom: 1rem;
     }

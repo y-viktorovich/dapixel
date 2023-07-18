@@ -1,0 +1,61 @@
+.step {
+    margin-top: -45rem;
+    position: relative;
+
+    padding-bottom: 9.55rem;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 3.7rem;
+        margin: 0 -2.5rem;
+    }
+
+    &__col-left {
+        width: 45%;
+        padding: 0 2.5rem;
+    }
+
+    &__col-right {
+        width: 55%;
+        padding: 0 2.5rem;
+    }
+
+
+    &__item-left,
+    &__item-right {
+        padding: 8.1rem 8.3rem 10.5rem 5.35rem;
+        box-shadow: 0 69px 114px rgba($black, .08);
+        margin-bottom: 5rem;
+        background-color: $white;
+        border-radius: 3rem;
+    }
+
+    &__item-right {
+        padding: 7.2rem 5.2rem 7.2rem 5.2rem;
+    }
+
+    &__title {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 2.8rem;
+        color: $yellow;
+        font-weight: 700;
+
+        margin-bottom: 3.6rem;
+    }
+
+    &__text {
+        font-family: 'HK Grotesk', sans-serif;
+        font-size: 2.2rem;
+        color: $black;
+        font-weight: 600;
+        line-height: 1.6;
+        opacity: .9;
+        text-align: justify;
+    }
+}
+
+
+.step__col-right:nth-child(2){
+    margin-top: 34.6rem;
+}

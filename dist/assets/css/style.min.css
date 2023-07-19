@@ -1493,10 +1493,6 @@ body {
   height: 156px;
 }
 
-.request__form-group__input:invalid:required {
-  background-image: linear-gradient(to right, pink, lightgreen);
-}
-
 .step {
   margin-top: -45rem;
   position: relative;

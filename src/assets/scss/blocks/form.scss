@@ -1,7 +1,26 @@
 .form {
+    display: flex;
+    flex-direction: column;
 
     &__group {
         margin-bottom: 2rem;
+
+        &.success input,
+        &.success textarea {
+            border-color: #436f64;
+            border-width: 2px;
+        }
+
+        &.error input,
+        &.error textarea {
+            border-color: #df1111;
+            border-width: 2px;
+        }
+
+        & .form__error {
+            font-size: 1.5rem;
+            color: rgb(180, 61, 61);
+        }
     }
 
     &__input {
@@ -25,6 +44,10 @@
 
         &:focus::placeholder {
             font-size: 0;
+        }
+
+        &::invalid {
+            background-color: red;
         }
     }
 }

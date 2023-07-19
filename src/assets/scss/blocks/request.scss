@@ -13,15 +13,12 @@
 
     &__info {
         width: 52.9%;
-        
     }
 
     &__info-item {
         max-width: 383px;
         margin: 0 auto;
     }
-
-
 
     &__title {
         font-family: 'HK Grotesk', sans-serif;
@@ -92,6 +89,14 @@
         width: 47.1%;
         max-width: 452px;
 
+        .form__group {
+            margin-bottom: 0.8rem;
+    
+            &:last-child {
+                margin-bottom: 1.1rem;
+            }
+        }
+
         &-title {
             font-family: 'HK Grotesk', sans-serif;
             font-size: 2.2rem;
@@ -100,14 +105,6 @@
             letter-spacing: .5px;
 
             margin-bottom: 2.2rem;
-        }
-    }
-
-    &__form-group {
-        margin-bottom: 0.8rem;
-
-        &:last-child {
-            margin-bottom: 1.1rem;
         }
     }
 
@@ -147,9 +144,16 @@
         resize: none;
         height: 156px;
     }
-
-
-
-
-
 }
+
+// .request__form-group__input::valid {
+//     background-color: red;
+// }
+
+// .request__form-group__input:invalid {
+//     background-color: red;
+// }
+
+.request__form-group__input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+  }

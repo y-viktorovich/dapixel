@@ -49,21 +49,25 @@
 
             <div class="request__form">
                 <div class="request__form-title">Or you can also contact us here</div>
-                <form class="form" action="/" method="post">
-                    <div class="request__form-group">
-                        <input class="request__form-group__input" id="username" type="text" name="name" placeholder="Name">
+                <form class="form" id="form" action="/" method="post">
+                    <div class="form__group">
+                        <input class="request__form-group__input" id="username" type="text" name="name" placeholder="Name" required>
+                        <div class="form__error"></div>
                     </div>
 
-                    <div class="request__form-group">
+                    <div class="form__group">
                         <input class="request__form-group__input" id="email" type="email" name="email" placeholder="Email">
+                        <div class="form__error"></div>
                     </div>
 
-                    <div class="request__form-group">
+                    <div class="form__group">
                         <input class="request__form-group__input" id="subject" type="text" name="subject" placeholder="Subject">
+                        <div class="form__error"></div>
                     </div>
 
-                    <div class="request__form-group">
+                    <div class="form__group">
                         <textarea class="request__form-group__textarea" id="textarea" name="input-text" placeholder="Massage"></textarea>
+                        <div class="form__error"></div>
                     </div>
 
                     <button class="btn btn--request btn--text__20" type="submit">Send</button>

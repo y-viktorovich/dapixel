@@ -29,6 +29,8 @@
 
     &__address {
         padding-top: 1.1rem;
+
+        margin-bottom: 3.8rem;
     }
 
     &__list-item {
@@ -52,4 +54,26 @@
             }
         }
     }
+
+    &__social-link {
+        display: inline-block;
+    }
+
+    &__social-icon {
+        width: 24px;
+        height: 24px;
+        fill: $black;
+
+        transition: fill .2s linear;
+
+        & + .footer__social-icon {
+            margin-left: 2.2rem;
+        }
+
+        &:hover {
+            fill: $white;
+        }
+    }
+
+
 }

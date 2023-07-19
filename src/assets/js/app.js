@@ -1,1 +1,100 @@
-console.log('file 1');
+// Form validation 
+let form = document.querySelector('#form'),
+    userName = document.querySelector('#username'),
+    email = document.querySelector('#email'),
+    subject = document.querySelector('#subject');
+    massage = document.querySelector('#textarea');
+
+
+
+
+const setError = (element, massage) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.form__error');
+
+    errorDisplay.innerText = massage;
+    inputControl.classList.add('error'),
+    inputControl.classList.remove('success');
+};
+
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.form__error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+
+const isValidEmail = email => {
+    const re = /^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u;
+    return re.test(String(email));
+};
+
+
+const isValidSubject = subject => {
+    const re = /^[a-zа-яё\s]+$/iu;
+    return re.test(String(subject));
+};
+
+
+const isValidUserName = username => {
+    const re = /^([а-яё\s]+|[a-z\s]+)$/iu;
+    return re.test(String(username));
+};
+
+
+const validateInputs = () => {
+    const usernameValue = userName.value.trim(),
+          emailValue = email.value.trim(),
+          subjectValue = subject.value.trim(),
+          massageValue = massage.value.trim();
+
+    if (usernameValue === '') {
+        setError(userName, 'Please enter a name');
+    } else if (!isValidUserName(usernameValue)) {
+        setError(userName, 'The name cannot consist of numbers and contain letters from different languages');
+    } else if (usernameValue.length < 2) {
+        setError(userName, 'Name must have at least two characters');
+    } else {
+        setSuccess(userName);
+    }
+
+    if (emailValue === '') {
+        setError(email, 'Please enter your email address');
+    } else if (!isValidEmail(emailValue)){
+        setError(email, 'Please enter your email address in the correct format');
+    } else {
+        setSuccess(email);
+    }
+
+    if (subjectValue === '') {
+        setError(subject, 'Please enter subject');
+    } else if (!isValidSubject(subjectValue)) {
+        setError(subject, 'the object must consist only of a letter');
+    } else if (subjectValue.length < 3) {
+        setError(subject, 'subject must be at least three characters long');
+    } else {
+        setSuccess(subject);
+    }
+
+    if (massageValue === '') {
+        setError(massage, 'The message field must not be empty. Please tell me what interests you.');
+    } else if (massageValue.length < 20 ) {
+        setError(massage, 'The message field must contain at least twenty characters.');
+    } else {
+        setSuccess(massage);
+    }
+};
+
+
+if (form) {
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+    
+
+        validateInputs();
+    });
+}

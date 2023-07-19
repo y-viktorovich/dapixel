@@ -40,7 +40,7 @@
         <div class="container">
             <div class="intro__inner">
                 <div class="intro__content">
-                    <h1 class="intro__title">Services</h1>
+                    <h1 class="intro__title intro__title--line">Services</h1>
     
                     <div class="intro__subtitle">All our digital marketing services start with a free 30-minute consultation call where we find the best strategy towards reaching your goals.</div>
                     <div class="intro__services">
@@ -199,21 +199,25 @@
     
                 <div class="request__form">
                     <div class="request__form-title">Or you can also contact us here</div>
-                    <form class="form" action="/" method="post">
-                        <div class="request__form-group">
-                            <input class="request__form-group__input" id="username" type="text" name="name" placeholder="Name">
+                    <form class="form" id="form" action="/" method="post">
+                        <div class="form__group">
+                            <input class="request__form-group__input" id="username" type="text" name="name" placeholder="Name" required>
+                            <div class="form__error"></div>
                         </div>
     
-                        <div class="request__form-group">
+                        <div class="form__group">
                             <input class="request__form-group__input" id="email" type="email" name="email" placeholder="Email">
+                            <div class="form__error"></div>
                         </div>
     
-                        <div class="request__form-group">
+                        <div class="form__group">
                             <input class="request__form-group__input" id="subject" type="text" name="subject" placeholder="Subject">
+                            <div class="form__error"></div>
                         </div>
     
-                        <div class="request__form-group">
+                        <div class="form__group">
                             <textarea class="request__form-group__textarea" id="textarea" name="input-text" placeholder="Massage"></textarea>
+                            <div class="form__error"></div>
                         </div>
     
                         <button class="btn btn--request btn--text__20" type="submit">Send</button>
@@ -263,6 +267,32 @@
                                 </li>
                             </ul>
                         </address>
+    
+                        <div class="footer__social">
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <svg class="footer__social-icon">
+                                    <use href="assets/images/svg/sprites.svg#facebook"></use>
+                                </svg>
+                            </a>
+    
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <svg class="footer__social-icon">
+                                    <use href="assets/images/svg/sprites.svg#twitter"></use>
+                                </svg>
+                            </a>
+    
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <svg class="footer__social-icon">
+                                    <use href="assets/images/svg/sprites.svg#linkedin"></use>
+                                </svg>
+                            </a>
+    
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <svg class="footer__social-icon">
+                                    <use href="assets/images/svg/sprites.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </div>
                     </div><!-- /.footer__block -->
                 </div><!-- /.footer__nav -->
     
@@ -321,5 +351,6 @@
         </div><!-- /.container -->
     </footer>
 
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

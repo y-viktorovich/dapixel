@@ -14,7 +14,6 @@
         background-position: 0 750px, left bottom;
     }
 
-
     &--sm {
         padding: 31rem 0 28.1rem;
     }
@@ -22,7 +21,6 @@
     &--big {
         min-height: 1184px;
     }
-    
 
     &__inner {
         display: flex;
@@ -73,6 +71,15 @@
 
                 transform: translateY(-51%);
             }
+
+            &--about {
+                width: 759px;
+                height: 854px;
+                top: 50%;
+                left: 58%;
+
+                transform: translateY(-49%);
+            }
         }
     }
 
@@ -85,8 +92,27 @@
 
         margin-bottom: 3.6rem;
 
+        position: relative;
+        z-index: 2;
+
         & span {
             color: $yellow;
+        }
+
+        &--line {
+            &:after {
+                content: '';
+                display: block;
+                width: 90%;
+                height: 20px;
+                background-color: $yellow;
+                opacity: .2;
+
+                position: absolute;
+                top: 30%;
+                left: 0;
+                z-index: 1;
+            }
         }
     }
 

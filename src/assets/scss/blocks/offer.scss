@@ -1,0 +1,31 @@
+.offer {
+    background-image: url('../images/download/download-book.svg');
+    background-repeat: no-repeat;
+    background-position: 300px 50px;
+    background-size: 639.5px;
+    background-color: $yellow;
+
+    &__content {
+        max-width: 660.5px;
+        padding: 17.5rem 0 16.5rem;
+        margin-left: auto;
+    }
+
+    &__title {
+        font-size: 3.6rem;
+        color: $white;
+        font-weight: 700;
+        line-height: 1.3;
+
+        margin-bottom: 3.8rem;
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        color: $white;
+        font-weight: 600;
+        line-height: 1.9;
+
+        margin-bottom: 2.55rem;
+    }
+}

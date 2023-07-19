@@ -1,0 +1,34 @@
+.companies {
+
+    padding: 9.15rem 0 9.3rem;
+    text-align: center;
+
+    &__title {
+        font-size: 2.4rem;
+        color: $black;
+        font-weight: 600;
+        line-height: 1.2;
+
+        opacity: .7;
+        margin-bottom: 4.1rem;
+    }
+
+    &__inner {
+        max-width: 1355px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item-icon {
+        transition: opacity .2s ease-out;
+        
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__item-icon + .companies__item-icon {
+        margin-left: 10.2rem;
+    }
+}

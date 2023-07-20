@@ -21,6 +21,16 @@
         color: $yellow;
     }
 
+    &:focus,
+    &:active {
+        background-color: darken($yellow, 10%);
+        color: $white;
+
+        &:after {
+            border-color: $white;
+        }
+    }
+
     &--trans {
         font-size: 1.6rem;
         color: $yellow;
@@ -35,6 +45,16 @@
             background-color: $yellow;
             color: $white;
         }
+
+        &:focus,
+        &:active {
+        background-color: darken($yellow, 10%);
+        color: $white;
+
+        &:after {
+            border-color: $white;
+        }
+    }
     }
     
     &--text__20 {
@@ -72,6 +92,11 @@
             background-color: $white;
             color: $black;
         }
+
+        &:focus,
+        &:active {
+            background-color: darken($white, 20%);
+        }
     }
 
     &--white {
@@ -95,6 +120,11 @@
         &:after {
             @include after;
             border-color: $black;
+        }
+
+        &:focus,
+        &:active {
+            background-color: darken($white, 20%);
         }
     }
 

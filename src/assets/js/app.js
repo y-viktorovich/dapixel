@@ -1,3 +1,16 @@
+// Header fixed
+
+const header = document.querySelector('#header');
+      intro = document.querySelector('#intro');
+
+if (header && intro) {
+    window.addEventListener('scroll', (event) => {
+        window.pageYOffset >= intro.offsetHeight ? header.classList.add('header--fixed') : header.classList.remove('header--fixed');
+    });
+}
+
+
+
 // Form validation 
 let form = document.querySelector('#form'),
     userName = document.querySelector('#username'),
@@ -6,25 +19,27 @@ let form = document.querySelector('#form'),
     massage = document.querySelector('#textarea');
 
 
-
-
 const setError = (element, massage) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.form__error');
+    const inputControl = element && element.parentElement;
+    const errorDisplay = inputControl && inputControl.querySelector('.form__error');
 
-    errorDisplay.innerText = massage;
-    inputControl.classList.add('error'),
-    inputControl.classList.remove('success');
+    if(element) {
+        errorDisplay.innerText = massage;
+        inputControl.classList.add('error'),
+        inputControl.classList.remove('success');
+    }
 };
 
 
 const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.form__error');
+    const inputControl = element && element.parentElement;
+    const errorDisplay = inputControl && inputControl.querySelector('.form__error');
 
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
+    if (element) {
+        errorDisplay.innerText = '';
+        inputControl.classList.add('success');
+        inputControl.classList.remove('error');
+    }
 };
 
 
@@ -47,16 +62,16 @@ const isValidUserName = username => {
 
 
 const validateInputs = () => {
-    const usernameValue = userName.value.trim(),
-          emailValue = email.value.trim(),
-          subjectValue = subject.value.trim(),
-          massageValue = massage.value.trim();
+    const usernameValue = userName && userName.value.trim(),
+          emailValue = email && email.value.trim(),
+          subjectValue = subject && subject.value.trim(),
+          massageValue = massage && massage.value.trim();
 
     if (usernameValue === '') {
         setError(userName, 'Please enter a name');
     } else if (!isValidUserName(usernameValue)) {
         setError(userName, 'The name cannot consist of numbers and contain letters from different languages');
-    } else if (usernameValue.length < 2) {
+    } else if (usernameValue && usernameValue.length < 2) {
         setError(userName, 'Name must have at least two characters');
     } else {
         setSuccess(userName);
@@ -64,7 +79,7 @@ const validateInputs = () => {
 
     if (emailValue === '') {
         setError(email, 'Please enter your email address');
-    } else if (!isValidEmail(emailValue)){
+    } else if (!isValidEmail(emailValue)) {
         setError(email, 'Please enter your email address in the correct format');
     } else {
         setSuccess(email);
@@ -74,7 +89,7 @@ const validateInputs = () => {
         setError(subject, 'Please enter subject');
     } else if (!isValidSubject(subjectValue)) {
         setError(subject, 'the object must consist only of a letter');
-    } else if (subjectValue.length < 3) {
+    } else if (subjectValue && subjectValue.length < 3) {
         setError(subject, 'subject must be at least three characters long');
     } else {
         setSuccess(subject);
@@ -82,7 +97,7 @@ const validateInputs = () => {
 
     if (massageValue === '') {
         setError(massage, 'The message field must not be empty. Please tell me what interests you.');
-    } else if (massageValue.length < 20 ) {
+    } else if (massageValue && massageValue.length < 20 ) {
         setError(massage, 'The message field must contain at least twenty characters.');
     } else {
         setSuccess(massage);
@@ -93,7 +108,6 @@ const validateInputs = () => {
 if (form) {
     form.addEventListener('submit', event => {
         event.preventDefault();
-    
 
         validateInputs();
     });

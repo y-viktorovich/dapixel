@@ -56,7 +56,7 @@ function serve() {
     browserSync.init({
         server: {
             baseDir: "./" + distPath,
-            index: 'industries.html'
+            index: 'blog.html'
         }
     });
 }

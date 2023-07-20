@@ -6,6 +6,15 @@
    z-index: 1000;
 
    box-shadow: -15px -15px 20px 1px $black;
+   transition: background-color .2s ease-in-out;
+
+    &--fixed {
+        position: fixed;
+        background-color: $white;
+        transform: translateY(0);
+
+        animation: header .5s ease-in-out normal forwards;
+    }
 
     &__container {
         width: 100%;

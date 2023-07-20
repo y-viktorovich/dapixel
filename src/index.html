@@ -4,7 +4,7 @@ title: Home
 ---
 
 <!-- Intro -->
-<div class="intro">
+<div class="intro" id="intro">
     <div class="container">
         <div class="intro__inner">
             <div class="intro__content">
@@ -95,13 +95,14 @@ title: Home
             <h2 class="subscribe__title">Book A Free Digital Marketing Consultation</h2>
 
             <div class="subscribe__form">
-                <div class="form">
+                <form class="form" id="form" action="/" method="post">
                     <div class="form__group">
-                        <input  class="form__input" type="email" placeholder="Your Email">
+                        <input  class="subscribe__input" id="email" type="email" placeholder="Your Email">
+                        <div class="form__error"></div>
                     </div>
 
                     <button class="btn btn--text__24 btn--darken" type="submit">Book my free meeting</button>
-                </div>
+                </form>
             </div>
         </div>
     </div>

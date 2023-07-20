@@ -502,6 +502,15 @@ body {
     color: #F9BC6E;
 }
 
+.btn:focus, .btn:active {
+    background-color: #f7a53d;
+    color: #fff;
+}
+
+.btn:focus:after, .btn:active:after {
+    border-color: #fff;
+}
+
 .btn--trans {
     font-size: 1.6rem;
     color: #F9BC6E;
@@ -515,6 +524,15 @@ body {
 .btn--trans:hover {
     background-color: #F9BC6E;
     color: #fff;
+}
+
+.btn--trans:focus, .btn--trans:active {
+    background-color: #f7a53d;
+    color: #fff;
+}
+
+.btn--trans:focus:after, .btn--trans:active:after {
+    border-color: #fff;
 }
 
 .btn--text__20 {
@@ -550,6 +568,10 @@ body {
 .btn--darken:hover {
     background-color: #fff;
     color: #000;
+}
+
+.btn--darken:focus, .btn--darken:active {
+    background-color: #cccccc;
 }
 
 .btn--white {
@@ -588,6 +610,10 @@ body {
     transition: border-color 0.2s linear, transform 0.2s ease-in-out;
     transition: border-color 0.2s linear, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
     border-color: #000;
+}
+
+.btn--white:focus, .btn--white:active {
+    background-color: #cccccc;
 }
 
 .btn--big {
@@ -845,7 +871,7 @@ body {
     height: 3px;
     background-color: #F9BC6E;
     border-radius: 2px;
-    margin: 2rem auto 0;
+    margin: 2rem auto 5rem;
 }
 
 .descriptions {
@@ -940,6 +966,40 @@ body {
     width: 48.2%;
 }
 
+.subscribe__input {
+    display: block;
+    width: 100%;
+    padding: 2.4rem 4rem;
+    border: 2px solid transparent;
+    border-radius: 10rem;
+    font-family: "HK Grotesk", sans-serif;
+    font-size: 2.2rem;
+    color: #000;
+    line-height: 1.3;
+    transition: background-color 0.2s linear, box-shadow 0.2s linear;
+}
+
+.subscribe__input:focus {
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe__input:focus::-webkit-input-placeholder {
+    font-size: 0;
+}
+
+.subscribe__input:focus:-ms-input-placeholder {
+    font-size: 0;
+}
+
+.subscribe__input:focus::-ms-input-placeholder {
+    font-size: 0;
+}
+
+.subscribe__input:focus::placeholder {
+    font-size: 0;
+}
+
 .subscribe__title,
 .article__title {
     width: 51.8%;
@@ -972,38 +1032,19 @@ body {
     margin-bottom: 2rem;
 }
 
-.form__input {
-    display: block;
-    width: 100%;
-    padding: 2.4rem 4rem;
-    border: none;
-    border-radius: 10rem;
-    font-family: "HK Grotesk", sans-serif;
-    font-size: 2.2rem;
-    color: #000;
-    line-height: 1.3;
-    transition: background-color 0.2s linear, box-shadow 0.2s linear;
+.form__group.success input, .form__group.success textarea {
+    border-color: #436f64;
+    border-width: 2px;
 }
 
-.form__input:focus {
-    background-color: #f2f2f2;
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+.form__group.error input, .form__group.error textarea {
+    border-color: #df1111;
+    border-width: 2px;
 }
 
-.form__input:focus::-webkit-input-placeholder {
-    font-size: 0;
-}
-
-.form__input:focus:-ms-input-placeholder {
-    font-size: 0;
-}
-
-.form__input:focus::-ms-input-placeholder {
-    font-size: 0;
-}
-
-.form__input:focus::placeholder {
-    font-size: 0;
+.form__group .form__error {
+    font-size: 1.5rem;
+    color: rgb(180, 61, 61);
 }
 
 .reviews {
@@ -1277,19 +1318,23 @@ body {
     display: inline-block;
 }
 
+.footer__social-link + .footer__social-link {
+    margin-left: 2.2rem;
+}
+
+.footer__social-link:hover .footer__social-icon {
+    fill: #fff;
+}
+
+.footer__social-link:focus .footer__social-icon, .footer__social-link:active .footer__social-icon {
+    fill: #e6e6e6;
+}
+
 .footer__social-icon {
     width: 24px;
     height: 24px;
     fill: #000;
     transition: fill 0.2s linear;
-}
-
-.footer__social-icon + .footer__social-icon {
-    margin-left: 2.2rem;
-}
-
-.footer__social-icon:hover {
-    fill: #fff;
 }
 
 .blog {
@@ -1674,6 +1719,10 @@ body {
     fill: #000;
 }
 
+.request__link:focus .request__link-icon, .request__link:active .request__link-icon {
+    fill: #f58f0c;
+}
+
 .request__link-icon {
     width: 24px;
     height: 24px;
@@ -1686,6 +1735,14 @@ body {
     max-width: 452px;
 }
 
+.request__form .form__group {
+    margin-bottom: 0.8rem;
+}
+
+.request__form .form__group:last-child {
+    margin-bottom: 1.1rem;
+}
+
 .request__form-title {
     font-family: "HK Grotesk", sans-serif;
     font-size: 2.2rem;
@@ -1693,14 +1750,6 @@ body {
     line-height: 1.3;
     letter-spacing: 0.5px;
     margin-bottom: 2.2rem;
-}
-
-.request__form-group {
-    margin-bottom: 0.8rem;
-}
-
-.request__form-group:last-child {
-    margin-bottom: 1.1rem;
 }
 
 .request__form-group__input, .request__form-group__textarea {

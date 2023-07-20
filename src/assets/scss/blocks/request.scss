@@ -75,6 +75,13 @@
                 fill: $black;
             }
         }
+
+        &:focus,
+        &:active  {
+            .request__link-icon {
+                fill: darken($yellow, 20%);
+            }
+        }
     }
 
     &__link-icon {

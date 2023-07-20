@@ -57,6 +57,23 @@
 
     &__social-link {
         display: inline-block;
+
+        & + .footer__social-link {
+            margin-left: 2.2rem;
+        }
+
+        &:hover {
+            .footer__social-icon {
+                fill: $white;
+            }
+        }
+
+        &:focus,
+        &:active {
+            .footer__social-icon {
+                fill: darken($white, 10%);
+            }
+        }
     }
 
     &__social-icon {
@@ -65,15 +82,5 @@
         fill: $black;
 
         transition: fill .2s linear;
-
-        & + .footer__social-icon {
-            margin-left: 2.2rem;
-        }
-
-        &:hover {
-            fill: $white;
-        }
     }
-
-
 }

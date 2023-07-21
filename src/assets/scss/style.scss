@@ -22,7 +22,20 @@ body {
 }
 
 
-/* Blocks */
+/* Slider Swiper
+=============================*/
+
+@import '../../../node_modules/swiper/swiper.scss';
+
+/* Vendor
+=============================*/
+
+@import 'vendor/swiper.scss';
+
+
+/* Blocks
+=============================*/
+
 @import "blocks/page";
 @import "blocks/header";
 @import "blocks/container";
@@ -51,10 +64,14 @@ body {
 @import "blocks/about";
 
 
-/* Helpers */
+/* Helpers
+=============================*/
+
 @import "helpers";
 
-/* Helpers */
+/* Animations
+=============================*/
+
 @import "animations";
 
 

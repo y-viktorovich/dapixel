@@ -1,6 +1,8 @@
+//= components/file3.js
+
 // Header fixed
 
-const header = document.querySelector('#header');
+const header = document.querySelector('#header'),
       intro = document.querySelector('#intro');
 
 if (header && intro) {
@@ -15,7 +17,7 @@ if (header && intro) {
 let form = document.querySelector('#form'),
     userName = document.querySelector('#username'),
     email = document.querySelector('#email'),
-    subject = document.querySelector('#subject');
+    subject = document.querySelector('#subject'),
     massage = document.querySelector('#textarea');
 
 
@@ -112,3 +114,35 @@ if (form) {
         validateInputs();
     });
 }
+
+
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+
+
+
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    modules: [Navigation],
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    speed: 700,
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+});

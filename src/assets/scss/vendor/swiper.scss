@@ -38,7 +38,7 @@
 		padding-left: 5px;
 	}
 
-	&-buttonss {
+	&-buttons {
 		position: absolute;
 		right: 20px;
 		bottom: 80px;
@@ -54,6 +54,10 @@
 		@include breakpoint($mobile-large) {
             bottom: 5%;
         }
+
+		@include breakpoint($mobile) {
+			display: none;
+		}
 	}
 
 	&-button-prev,

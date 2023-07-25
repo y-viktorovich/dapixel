@@ -1,6 +1,4 @@
 .nav {
-
-    display: none;
     @include breakpoint($notebook) {
         display: none;
         width: 100%;

@@ -4,21 +4,53 @@
 
     padding-bottom: 9.55rem;
 
+    @include breakpoint($notebook) {
+        margin-top: 0;
+    }
+
+    @include breakpoint($notebook) {
+        padding-bottom: 5.55rem;
+    }
+
+    @include breakpoint($mobile-large) {
+        padding-bottom: 3.55rem;
+    }
+
     &__inner {
         display: flex;
         flex-wrap: wrap;
         padding: 0 3.7rem;
         margin: 0 -2.5rem;
+
+        @include breakpoint($mobile-large) {
+            margin: 0 -2.5rem;
+        }
     }
 
     &__col-left {
         width: 45%;
         padding: 0 2.5rem;
+
+        @include breakpoint($notebook) {
+            width: 100%;
+        }
+
+        @include breakpoint($mobile-large) {
+            padding: 0;
+        }
     }
 
     &__col-right {
         width: 55%;
         padding: 0 2.5rem;
+
+        @include breakpoint($notebook) {
+            width: 100%;
+        }
+
+        @include breakpoint($mobile-large) {
+            padding: 0;
+        }
     }
 
 
@@ -29,10 +61,30 @@
         margin-bottom: 5rem;
         background-color: $white;
         border-radius: 3rem;
+
+        @include breakpoint($notebook) {
+            padding: 7.2rem 5.2rem 7.2rem 5.2rem;
+        }
+
+        @include breakpoint($mobile-large) {
+            padding: 5.2rem 3.2rem 5.2rem 3.2rem;
+        }
+
+        @include breakpoint($mobile) {
+            padding: 3.2rem 1.7rem 3.2rem 1.7rem;
+        }
     }
 
     &__item-right {
         padding: 7.2rem 5.2rem 7.2rem 5.2rem;
+
+        @include breakpoint($mobile-large) {
+            padding: 5.2rem 3.2rem 5.2rem 3.2rem;
+        }
+
+        @include breakpoint($mobile) {
+            padding: 3.2rem 1.7rem 3.2rem 1.7rem;
+        }
     }
 
     &__title {
@@ -42,6 +94,10 @@
         font-weight: 700;
 
         margin-bottom: 3.6rem;
+
+        @include breakpoint($mobile) {
+            margin-bottom: 2.2rem;
+        }
     }
 
     &__text {
@@ -52,10 +108,19 @@
         line-height: 1.6;
         opacity: .9;
         text-align: justify;
+
+        @include breakpoint($mobile) {
+            text-align: left;
+            font-size: 1.8rem;
+        }
     }
 }
 
 
 .step__col-right:nth-child(2){
     margin-top: 34.6rem;
+
+    @include breakpoint($notebook) {
+        margin-top: 0;
+    }
 }

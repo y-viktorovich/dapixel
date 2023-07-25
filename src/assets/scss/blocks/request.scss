@@ -9,10 +9,6 @@
         padding: 8.9rem 0 8.8rem;
     }
 
-    @include breakpoint($tablet) {
-        padding: 8.9rem 0 3.8rem;
-    }
-
     &__inner {
         display: flex;
         flex-wrap: wrap;

@@ -97,16 +97,6 @@
                     width: 600px;
                     height: 700px;
                 }
-
-                @include breakpoint($mobile-large) {
-                    width: 400px;
-                    height: 500px;
-                }
-
-                @include breakpoint($mobile) {
-                    width: 300px;
-                    height: 400px;
-                }
             }
 
             &--services {
@@ -119,8 +109,6 @@
 
                 @include breakpoint($notebook) {
                     left: 0;
-                    width: 300px;
-                    height: 400px;
                 }
             }
 
@@ -131,6 +119,10 @@
                 left: 50%;
 
                 transform: translateY(-50%);
+
+                @include breakpoint($notebook) {
+                    left: 0;
+                }
             }
 
             &--industries {
@@ -140,6 +132,10 @@
                 left: 58%;
 
                 transform: translateY(-51%);
+
+                @include breakpoint($notebook) {
+                    left: 0;
+                }
             }
 
             &--about {
@@ -149,6 +145,10 @@
                 left: 58%;
 
                 transform: translateY(-49%);
+
+                @include breakpoint($notebook) {
+                    left: 0;
+                }
             }
         }
     }
@@ -171,10 +171,6 @@
 
         @include breakpoint($mobile-large) {
             font-size: 4rem;
-        }
-
-        @include breakpoint($mobile-large) {
-            font-size: 3rem;
         }
 
         & span {

@@ -1,6 +1,6 @@
 .companies {
-
     padding: 9.15rem 0 9.3rem;
+
     text-align: center;
 
     &__title {
@@ -16,19 +16,33 @@
     &__inner {
         max-width: 1355px;
         display: flex;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
 
+    &__item {
+        margin-bottom: 2rem;
+        
+        & + .companies__item {
+            margin-left: 10.2rem;
+
+            @include breakpoint($notebook-large) {
+                margin-left: 0;
+            }
+        }
+
+        @include breakpoint($notebook-large) {
+            padding: 0 2rem;
+        }
+    }
+
     &__item-icon {
         transition: opacity .2s ease-out;
+        margin: 0 auto;
         
         &:hover {
             opacity: .8;
         }
-    }
-
-    &__item-icon + .companies__item-icon {
-        margin-left: 10.2rem;
     }
 }

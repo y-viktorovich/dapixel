@@ -11,6 +11,14 @@
         margin-bottom: 18.5rem;
 
         text-align: center;
+
+        @include breakpoint($notebook) {
+            margin-bottom: 12.5rem;
+        }
+
+        @include breakpoint($tablet) {
+            margin-bottom: 8.5rem;
+        }
     }
 
     &__inner {
@@ -21,9 +29,9 @@
 
     &__item {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         padding-bottom: 8rem;
-
     }
 
     &__text-left,
@@ -37,6 +45,11 @@
         opacity: .7;
         text-align: justify;
 
+        @include breakpoint($notebook) {
+            width: 100%;
+            text-align: center;
+        }
+
         p {
             margin-bottom: 3rem;
         }
@@ -44,6 +57,10 @@
 
     &__text-right {
         width: 47.63%;
+
+        @include breakpoint($notebook) {
+            width: 100%;
+        }
     }
 
     &__photo-right {
@@ -51,10 +68,20 @@
         position: relative;
 
         padding-left: 9rem;
+
+        @include breakpoint($notebook) {
+            width: 100%;
+            padding-left: 0;
+        }
     }
 
     &__photo-left {
         width: 52.37%;
+
+        @include breakpoint($notebook) {
+            width: 100%;
+            order: 2;
+        }
     }
 
 
@@ -65,6 +92,10 @@
 
         position: relative;
         margin-top: -100px;
+
+        @include breakpoint($notebook) {
+            margin: 0 auto;
+        }
     }
 
     &__photo-left__img {
@@ -73,5 +104,9 @@
 
         position: relative;
         margin-left: -100px;
+
+        @include breakpoint($notebook) {
+            margin: 0 auto;
+        }
     }
 }

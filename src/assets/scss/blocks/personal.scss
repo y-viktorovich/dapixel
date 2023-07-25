@@ -4,6 +4,14 @@
     position: relative;
     z-index: 1;
 
+    @include breakpoint($notebook) {
+        padding: 4.3rem 0 5rem;
+    }
+
+    @include breakpoint($tablet) {
+        padding: 4.3rem 0 3rem;
+    }
+
     &__inner {
         display: flex;
         flex-wrap: wrap;
@@ -12,11 +20,26 @@
     }
 
     &__col {
+        display: flex;
         width: 33.3333%;
         padding: 4.3rem 2.55rem;
+
+        @include breakpoint($notebook) {
+            width: 50%;
+        }
+
+        @include breakpoint($mobile-large) {
+            width: 100%;
+            padding: 3.3rem 2.55rem;
+        }
+
+        @include breakpoint($mobile-sm) {
+            padding: 2.5rem 2.55rem;
+        }
     }
 
     &__item {
+        width: 100%;
         display: flex;
         flex-direction: column;
         padding: 5.6rem 5.95rem;
@@ -26,6 +49,14 @@
         background-color: $white;
 
         text-align: center;
+
+        @include breakpoint($notebook) {
+            padding: 4.6rem 4.95rem;
+        }
+
+        @include breakpoint($mobile) {
+            padding: 4.6rem 2rem;
+        }
     }
 
     &__header {

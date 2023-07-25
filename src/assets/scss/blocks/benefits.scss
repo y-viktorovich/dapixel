@@ -2,6 +2,22 @@
     padding: 26.4rem 0 28.3rem;
     position: relative;
 
+    @include breakpoint($notebook-large) {
+        padding: 16.4rem 0 18.3rem;
+    }
+
+    @include breakpoint($notebook) {
+        padding: 12.4rem 0 14.3rem;
+    }
+
+    @include breakpoint($tablet) {
+        padding: 8.4rem 0 8.3rem;
+    }
+
+    @include breakpoint($mobile-large) {
+        padding: 6.4rem 0 1.3rem;
+    }
+
     &__inner {
         display: flex;
         flex-wrap: wrap;
@@ -9,10 +25,20 @@
 
     &__content {
         width: 42%;
+
+        @include breakpoint($mobile-large) {
+            width: 100%;
+        }
+        
     }
 
     &__photo {
         width: 58%;
+
+        @include breakpoint($mobile-large) {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__title {
@@ -23,6 +49,10 @@
         line-height: 1.4;
 
         margin-bottom: 1.8rem;
+
+        @include breakpoint($mobile) {
+            font-size: 3.5rem;
+        }
     }
 
     &__text {
@@ -33,6 +63,10 @@
         line-height: 1.9;
 
         margin-bottom: 5rem;
+
+        @include breakpoint($mobile) {
+            font-size: 1.8rem;
+        }
     }
 
     &__photo-img {
@@ -44,6 +78,23 @@
         max-width: 1541px;
         height: 867px;
         object-fit: cover;
-        object-position: center;;
+        object-position: center;
+
+        @include breakpoint($notebook-large) {
+            max-width: 800px;
+            height: 600px;
+        }
+
+        @include breakpoint($notebook) {
+            max-width: 400px;
+            height: 500px;
+        }
+
+        @include breakpoint($mobile-large) {
+            position: relative;
+
+            max-width: 100%;
+            height: auto;
+        }
     }
 }

@@ -7,6 +7,24 @@
     background-image: url('../images/svg/intro/intro-bg.svg');
     background-repeat: no-repeat;
     background-position: 0 bottom;
+    background-size: cover;
+
+    @include breakpoint($laptop) {
+        background-size: auto;
+    }
+
+    @include breakpoint($notebook) {
+        padding-top: 22rem;
+        padding-bottom: 0;
+    }
+
+    @include breakpoint($tablet) {
+        padding-top: 17rem;
+    }
+
+    @include breakpoint($mobile-large) {
+		padding-top: 13rem;
+	}
 
     &--dashed {
         background-image:  url('../images/svg/intro/intro-dashed.svg'), url('../images/svg/intro/intro-bg.svg');
@@ -16,34 +34,80 @@
 
     &--sm {
         padding: 31rem 0 28.1rem;
+
+        @include breakpoint($mobile-large) {
+            padding: 26rem 0 23.1rem;
+        }
+
+        @include breakpoint($mobile) {
+            padding: 17rem 0 14.1rem;
+        }
     }
 
     &--big {
         min-height: 1184px;
+
+        @include breakpoint($notebook) {
+            min-height: auto;
+        }
     }
 
     &__inner {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__content {
         width: 60%;
         max-width: 750px;
+
+        @include breakpoint($mobile-large) {
+            width: 100%;
+        }
     }
 
     &__photo {
         width: 40%;
 
+        @include breakpoint($mobile-large) {
+            width: 100%;
+            height: auto;
+        }
+
         &-bg {
             position: absolute;
-            right: 0;
-            bottom: 0;
             z-index: 1;
 
-            width: 960px;
-            height: 1080px;
-            object-fit: contain;
+            object-fit: cover;
             object-position: center;
+
+            @include breakpoint($notebook) {
+                position: relative;
+                margin-left: auto;
+            }
+
+            &--home {
+                width: 960px;
+                height: 1080px;
+
+                right: 0;
+                bottom: 0;
+
+                @include breakpoint($notebook-large) {
+                    width: 600px;
+                    height: 700px;
+                }
+
+                @include breakpoint($mobile-large) {
+                    width: 400px;
+                    height: 500px;
+                }
+
+                @include breakpoint($mobile) {
+                    width: 300px;
+                    height: 400px;
+                }
+            }
 
             &--services {
                 width: 713px;
@@ -52,6 +116,12 @@
                 left: 50%;
 
                 transform: translateY(-45%);
+
+                @include breakpoint($notebook) {
+                    left: 0;
+                    width: 300px;
+                    height: 400px;
+                }
             }
 
             &--audit {
@@ -95,6 +165,18 @@
         position: relative;
         z-index: 2;
 
+        @include breakpoint($notebook) {
+            font-size: 5rem;
+        }
+
+        @include breakpoint($mobile-large) {
+            font-size: 4rem;
+        }
+
+        @include breakpoint($mobile-large) {
+            font-size: 3rem;
+        }
+
         & span {
             color: $yellow;
         }
@@ -124,6 +206,10 @@
         line-height: 1.4;
 
         margin-bottom: 1rem;
+
+        @include breakpoint($mobile-large) {
+            font-size: 1.8rem;
+        }
     }
 
     &__services {

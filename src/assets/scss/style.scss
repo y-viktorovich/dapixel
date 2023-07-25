@@ -13,6 +13,11 @@ body {
     font-family: 'HK Grotesk', sans-serif;
     font-size: 1.8rem;
     color: $black;
+
+    &.no-scroll,
+    &.show-nav {
+        overflow: hidden;
+    }
 }
 
 *,
@@ -62,6 +67,7 @@ body {
 @import "blocks/offer";
 @import "blocks/companies";
 @import "blocks/about";
+@import "blocks/burger";
 
 
 /* Helpers

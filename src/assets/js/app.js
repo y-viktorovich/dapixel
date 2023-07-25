@@ -12,6 +12,29 @@ if (header && intro) {
 }
 
 
+// Burger menu
+
+const burgerBtn = document.querySelector('#navToggle'),
+      nav = document.querySelector('#nav'),
+      body = document.querySelector('body');
+
+
+burgerBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    burgerBtn.classList.toggle('active');
+    nav.classList.toggle('show');
+    body.classList.toggle('show-nav');
+
+});
+
+window.addEventListener('resize',(e) => {
+    burgerBtn.classList.remove('active');
+    nav.classList.remove('show');
+    body.classList.remove('show-nav');
+});
+
+
 
 // Form validation 
 let form = document.querySelector('#form'),
@@ -116,33 +139,5 @@ if (form) {
 }
 
 
-import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
 
 
-
-
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    modules: [Navigation],
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    speed: 700,
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-});

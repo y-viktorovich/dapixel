@@ -4,11 +4,41 @@
     &__inner {
         padding: 26rem 0 28.9rem;
         display: flex;
+        flex-wrap: wrap;
         position: relative;
+
+        @include breakpoint($laptop) {
+            padding: 18rem 0 18.9rem;
+        }
+
+        @include breakpoint($notebook-large) {
+            padding: 17.3rem 0 17.5rem;
+        }
+    
+        @include breakpoint($notebook) {
+            padding: 13.3rem 0 10.5rem;
+        }
+    
+        @include breakpoint($tablet) {
+            padding: 10.3rem 0 7.5rem;
+        }
+    
+        @include breakpoint($tablet) {
+            padding: 7.3rem 0 4.5rem;
+        }
     }
 
     &__title {
         width: 35.81%;
+
+        @include breakpoint($notebook-large) {
+            width: 40%;
+        }
+
+        @include breakpoint($notebook) {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
     }
 
     &__content {
@@ -22,6 +52,28 @@
 
         padding-left: 6.6rem;
         transform: translateY(-50%);
+
+        @include breakpoint($notebook-large) {
+            width: 60%;
+            padding-left: 2rem;
+        }
+
+        @include breakpoint($notebook) {
+            width: 75%;
+        }
+
+        @include breakpoint($notebook) {
+            width: 100%;
+            padding-left: 0;
+
+            position: static;
+            transform: none;
+        }
+
+        @include breakpoint($mobile-large) {
+            flex-wrap: wrap;
+        }
+        
     }
 
     &__item {
@@ -35,6 +87,17 @@
         border-radius: 3rem;
         margin-right: 4rem;
         
+        @include breakpoint($laptop) {
+            min-width: auto;
+        }
+
+        @include breakpoint($notebook) {
+            margin: 0 2rem 3rem;
+        }
+
+        @include breakpoint($mobile-large) {
+            width: 100%;
+        }
     }
 
     &__header {
@@ -60,6 +123,14 @@
                 text-decoration: underline;
             }
         }
+
+        @include breakpoint($notebook) {
+            font-size: 3.5rem;
+        }
+
+        @include breakpoint($tablet) {
+            font-size: 3rem;
+        }
     }
 
     &__main {
@@ -68,6 +139,10 @@
         @include hide-text;
         -webkit-line-clamp: 3;
         line-clamp: 3;
+
+        @include breakpoint($notebook) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__text {

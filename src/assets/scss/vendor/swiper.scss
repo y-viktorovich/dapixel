@@ -2,6 +2,14 @@
 .swiper {
 	min-height: 350px;
 
+	@include breakpoint($tablet) {
+		min-height: 270px;
+	}
+
+	@include breakpoint($mobile-large) {
+		min-height: auto;
+	}
+
 	&:before,
 	&:after {
 		content: '';
@@ -38,6 +46,14 @@
 		z-index: 2;
 
 		display: flex;
+
+		@include breakpoint($notebook) {
+			right: 5px;
+		}
+
+		@include breakpoint($mobile-large) {
+            bottom: 5%;
+        }
 	}
 
 	&-button-prev,

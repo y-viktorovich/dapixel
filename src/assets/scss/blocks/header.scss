@@ -5,7 +5,7 @@
    left: 0;
    z-index: 1000;
 
-   box-shadow: -15px -15px 20px 1px $black;
+   box-shadow: 0 12px 22px rgba($black, .05);
    transition: background-color .2s ease-in-out;
 
     &--fixed {
@@ -38,6 +38,11 @@
 
     width: 194px;
     height: 28px;
+
+    @include breakpoint($notebook) {
+        width: 160px;
+        height: 20px;
+    }
 }
 
 .header__logo-icon,

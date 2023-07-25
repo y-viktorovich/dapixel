@@ -1,9 +1,15 @@
 .footer {
-    padding: 12.15rem 0;
+    padding: 12.15rem 0 8.65rem;
     background-color: $yellow;
+    margin-top: auto;
+
+    @include breakpoint($mobile) {
+        padding: 8.15rem 0 4.65rem;
+    }
 
     &__inner {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
 
         margin: 0 -2.65rem;
@@ -11,10 +17,22 @@
 
     &__block {
         display: flex;
+        flex-wrap: wrap;
+
+
+        @include breakpoint($tablet) {
+            width: 100%;
+        }
     }
 
     &__nav {
         padding: 0 7.3rem;
+        margin-bottom: 3.5rem;
+
+        @include breakpoint($mobile) {
+            width: 100%;
+            padding: 0 4.3rem;
+        }
     }
 
     &__title {

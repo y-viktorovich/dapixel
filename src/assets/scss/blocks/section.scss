@@ -1,12 +1,20 @@
 .section {
     padding: 18rem 0 18rem;
 
+    @include breakpoint($notebook-large) {
+        padding: 7rem 0;
+    }
+
     &__title {
         font-family: 'HK Grotesk', sans-serif;
         font-size: 5.2rem;
         color: $black;
         font-weight: 700;
         text-align: center;
+
+        @include breakpoint($tablet) {
+            font-size: 4rem;
+        }
 
         &:after {
             content: '';

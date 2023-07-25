@@ -1,19 +1,37 @@
 .services {
     margin-top: -50px;
-    padding-bottom: 150px;
+    padding-bottom: 15rem;
     position: relative;
+
+    @include breakpoint($notebook) {
+        margin-top: 0;
+    }
+
+    @include breakpoint($tablet) {
+        padding-bottom: 5rem;
+    }
 
     &__inner {
         display: flex;
         flex-wrap: wrap;
+
+        margin: 0 -1.8rem;
     }
 
     &__col {
         width: 50%;
         padding: 0 1.8rem;
 
+        @include breakpoint($tablet) {
+            width: 100%;
+        }
+
         &:nth-child(2) {
             margin-top: 12.7rem;
+
+            @include breakpoint($tablet) {
+                margin-top: 0;
+            }
         }
     }
 
@@ -23,10 +41,22 @@
         box-shadow: 0 69px 114px rgba($black, .08);
 
         margin-bottom: 5.2rem;
+
+        @include breakpoint($notebook) {
+            padding: 4.2rem 2.85rem 5.2rem 3.8rem;
+        }
+
+        @include breakpoint($mobile) {
+            padding: 3.2rem 1.85rem 3.2rem 1.8rem;
+        }
     }
 
     &__header {
         margin-bottom: 1.6rem;
+
+        @include breakpoint($tablet) {
+            text-align: center;
+        }
     }
 
     &__icon {
@@ -34,12 +64,20 @@
         height: 102px;
 
         margin-bottom: 3.95rem;
+
+        @include breakpoint($tablet) {
+            margin: 0 auto;
+        }
     }
 
     &__title {
         font-size: 2.8rem;
         color: $black;
         font-weight: 700;
+
+        @include breakpoint($mobile) {
+            font-size: 2.2rem;
+        }
     }
 
     &__content {
@@ -53,8 +91,16 @@
         text-align: justify;
         margin-bottom: 4.7rem;
 
+        @include breakpoint($mobile) {
+            font-size: 1.5rem;
+        }
+
         p {
             padding-right: 1rem;
+
+            @include breakpoint($tablet) {
+                padding-right: 0;
+            }
         }
     }
 

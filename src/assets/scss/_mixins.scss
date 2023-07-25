@@ -21,8 +21,6 @@
     transition: border-color .2s linear, transform .2s ease-in-out;
 }
 
-
-
 @mixin hide-text {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -31,4 +29,14 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     box-orient: vertical;
+}
+
+
+/* Media queries
+=============================*/
+
+@mixin breakpoint($bp) {
+    @media screen and (max-width: $bp) {
+        @content;
+    }
 }

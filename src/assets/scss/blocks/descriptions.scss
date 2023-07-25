@@ -1,6 +1,10 @@
 .descriptions {
     padding: 4.5rem 0;
 
+    @include breakpoint($tablet) {
+        padding: 2rem 0;
+    }
+
     &__inner {
         display: flex;
         flex-direction: column;
@@ -14,18 +18,43 @@
         padding: 5.7rem 7.5rem 6rem 38.6rem;
         border-radius: 1rem;
         box-shadow: 0 69px 114px rgba($black, .08);
-        
+
+        @include breakpoint($notebook) {
+            padding: 5.7rem 7.5rem 6rem 33.6rem;
+            margin-bottom: 7rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include breakpoint($tablet) {
+            padding: 5.7rem 5.5rem 6rem 27.6rem;
+        }
+
+        @include breakpoint($mobile) {
+            padding: 2.5rem 1.5rem 3.5rem;
+        }
 
         &:nth-child(even) {
-            margin-left: 44.4rem;
+            margin-left: auto;
             .descriptions__number {
                 right: -37px;
+
+                @include breakpoint($tablet) {
+                    right: 0;
+                    margin-left: 0;
+                }
             }
         }
 
         &:nth-child(odd) {
             .descriptions__number {
                 left: -37px;
+
+                @include breakpoint($tablet) {
+                    left: 0;
+                }
             }
         }
     }
@@ -40,6 +69,11 @@
         position: absolute;
         top: -80px;
         z-index: 1;
+
+        @include breakpoint($tablet) {
+            font-size: 8rem;
+            top: -50px;
+        }
     }
 
     &__photo-img {
@@ -48,6 +82,16 @@
         top: 0;
         left: 50px;
         z-index: 1;
+
+        @include breakpoint($tablet) {
+            font-size: 8rem;
+            left: -20px;
+        }
+
+        @include breakpoint($mobile) {
+            position: static;
+            margin: 0 auto;
+        }
     }
 
     &__title {
@@ -55,6 +99,14 @@
         font-size: 3.6rem;
         color: $yellow;
         font-weight: 700;
+
+        @include breakpoint($mobile-large) {
+            font-size: 2.5rem;
+        }
+
+        @include breakpoint($mobile) {
+            text-align: center;
+        }
 
         &:after {
             content: '';
@@ -64,6 +116,10 @@
             background-color: $yellow;
             border-radius: 2px;
             margin: 1.6rem 0;
+
+            @include breakpoint($mobile) {
+                margin: 1.6rem auto;
+            }
         }
     }
 
@@ -73,5 +129,9 @@
         color: $black;
         font-weight: 600;
         line-height: 1.7;
+
+        @include breakpoint($mobile-large) {
+            font-size: 1.5rem;
+        }
     }
 }

@@ -63,10 +63,18 @@
 
     &--text__22 {
         font-size: 2.2rem;
+
+        @include breakpoint($tablet) {
+            font-size: 1.8rem;
+        }
     }
 
     &--text__24 {
         font-size: 2.4rem;
+            
+        @include breakpoint($tablet) {
+            font-size: 2rem;
+        }
     }
 
     &--radius {
@@ -149,6 +157,10 @@
 
         &:after {
             @include after;
+
+            @include breakpoint($notebook-large) {
+                margin-left: 0.6rem;
+            }
         }
 
         &:hover {
@@ -165,6 +177,10 @@
 
         &:after {
             @include after;
+
+            @include breakpoint($notebook) {
+                margin-left: 0.6rem;
+            }
         }
 
         &:hover {

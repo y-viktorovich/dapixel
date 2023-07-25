@@ -1,9 +1,19 @@
 .reviews {
-    // position: relative;
-
     padding: 12.9rem 19.1rem 8.5rem;
     border-radius: 1rem;
     box-shadow: 0 69px 114px rgba($black, .08);
+
+    @include breakpoint($notebook-large) {
+        padding: 9.9rem 16.1rem 5.5rem;
+    }
+
+    @include breakpoint($notebook) {
+        padding: 5.9rem 7.1rem 2.5rem;
+    }
+
+    @include breakpoint($tablet) {
+        padding: 3.9rem 4.1rem 3.9rem;
+	}
 
     &__square {
         position: relative;
@@ -13,6 +23,14 @@
         height: 292px;
         border-radius: 1rem;
         background-color: $yellow;
+
+        @include breakpoint($tablet) {
+            height: 192px;
+        }
+
+        @include breakpoint($mobile-large) {
+            display: none;
+        }
     }
 
     &__quote {
@@ -24,12 +42,30 @@
         display: block;
         width: 100px;
         height: 87.5px;
+
+        @include breakpoint($tablet) {
+            width: 50px;
+            height: auto;
+
+            bottom: -7.3rem;
+        }
     }
 
     &__content {
         width: 75.37%;
         padding: 3.2rem 0 0 5.6rem;
 
+        @include breakpoint($tablet) {
+            padding: 3.2rem 0 0 3.6rem;
+        }
+
+        @include breakpoint($mobile-large) {
+            width: 100%;
+        }
+
+        @include breakpoint($mobile-large) {
+            padding: 0;
+        }
     }
 
     &__text {
@@ -40,6 +76,15 @@
         line-height: 1.6;
 
         margin-bottom: 4.5rem;
+
+        @include breakpoint($tablet) {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @include breakpoint($mobile) {
+            font-size: 2rem;
+        }
     }
 
     &__author {
@@ -47,6 +92,14 @@
         font-size: 2.2rem;
         color: $yellow;
         font-weight: 600;
+
+        @include breakpoint($tablet) {
+            font-size: 1.8rem;
+        }
+
+        @include breakpoint($mobile) {
+            font-size: 1.5rem;
+        }
 
         &:before,
         & span:before {

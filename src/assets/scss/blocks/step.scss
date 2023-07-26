@@ -51,8 +51,15 @@
         @include breakpoint($mobile-large) {
             padding: 0;
         }
-    }
 
+        &:nth-child(2){
+            margin-top: 34.6rem;
+        
+            @include breakpoint($notebook) {
+                margin-top: 0;
+            }
+        }
+    }
 
     &__item-left,
     &__item-right {
@@ -116,11 +123,3 @@
     }
 }
 
-
-.step__col-right:nth-child(2){
-    margin-top: 34.6rem;
-
-    @include breakpoint($notebook) {
-        margin-top: 0;
-    }
-}

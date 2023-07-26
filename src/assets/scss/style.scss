@@ -27,15 +27,13 @@ body {
 }
 
 
-/* Slider Swiper
-=============================*/
-
-@import '../../../node_modules/swiper/swiper.scss';
-
 /* Vendor
 =============================*/
 
+@import '../../../node_modules/swiper/swiper.scss';
 @import 'vendor/swiper.scss';
+@import '../../../node_modules/aos/src/sass/aos.scss';
+
 
 
 /* Blocks

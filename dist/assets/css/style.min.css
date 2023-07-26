@@ -3259,7 +3259,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   flex-wrap: wrap;
   padding: 12.3rem 0 9.3rem;
   box-shadow: 0 69px 114px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
 }
 @media screen and (max-width: 1199px) {
   .request__inner {
@@ -3270,6 +3272,17 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   .request__inner {
     padding: 5.9rem 1.5rem 3.8rem;
   }
+}
+.request__inner:before {
+  content: "";
+  width: 100%;
+  height: 6px;
+  display: block;
+  background-color: #F9BC6E;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .request__info {
   width: 52.9%;

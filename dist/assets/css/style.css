@@ -1958,6 +1958,36 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
     margin-left: 4.45rem;
 }
 
+.nav__link--arrow {
+    padding-right: 2.6rem;
+    position: relative;
+}
+
+.nav__link--arrow:after {
+    content: "";
+    vertical-align: middle;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-left: 0.7rem;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background: none;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    -webkit-transform: rotateZ(45deg) translateY(-85%);
+    transform: rotateZ(45deg) translateY(-85%);
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.nav__link--arrow:hover:after {
+    -webkit-transform: rotateZ(-135deg);
+    transform: rotateZ(-135deg);
+}
+
 @media screen and (max-width: 1199px) {
     .nav__link {
         text-align: center;
